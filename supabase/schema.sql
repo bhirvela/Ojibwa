@@ -47,6 +47,8 @@ create table public.sessions (
   end_date   date,
   status     public.session_status not null default 'setup',
   is_public  boolean not null default false,      -- parents can see it
+  time_zone  text not null default 'America/Chicago',  -- camp's clock, for "today" defaults
+  show_team_analysis boolean not null default true,    -- Team Analysis tab visible to parents
   created_at timestamptz not null default now(),
   check (end_date is null or start_date is null or end_date >= start_date)
 );

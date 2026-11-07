@@ -54,7 +54,7 @@ and are covered by `supabase/tests/test_rls.py`.
 
 | Table | Purpose |
 |-------|---------|
-| `sessions` | One per camp session ("The Week 2027"): dates, status, public on/off |
+| `sessions` | One per camp session ("The Week 2027"): dates, status, public on/off, time zone, Team Analysis on/off |
 | `teams` | Per session: name, short name, primary/secondary color, order. Any number of teams |
 | `event_types` | Per session: name, and whether it's a **regular** event (SV/JV/Prep/Team) or **special** (Song, Swimming...) |
 | `point_rules` | Default points per level, with optional per-event overrides (Team 15, Team + Tug of War 20) |
@@ -86,7 +86,8 @@ result and its points in one step, so a half-saved entry can't happen.
 ### Public (no sign-in) — mirrors the 2026 tabs
 - **Standings** — ranked teams with plank-style name badges and sweep icons; ticker of recent results.
 - **Event Log** — rounds with matchup cards and placement tables; jump-to-round.
-- **Team Analysis** — W-L record by level; tap to see the events.
+- **Team Analysis** — W-L record by level; tap to see the events. Shown to parents by default;
+  admins can hide it per session (`show_team_analysis`).
 - **Trends** — cumulative points chart by level.
 - **TV mode** (`?tv=1`) — full-screen standings + ticker for a screen in the dining hall, auto-refresh.
 
@@ -97,7 +98,7 @@ result and its points in one step, so a half-saved entry can't happen.
   - *Team event:* pick event, winner, loser (20 auto-filled for Tug of War / Field Hockey).
   - *Special placements:* pick event, then assign places/points to the teams that placed; ties allowed.
   - *Adjustment:* team, points, and a required reason.
-  - Round # suggests the current round; day defaults to **today in camp's time zone** (fixes the 2026 evening bug).
+  - Round # suggests the current round; day defaults to **today in camp's time zone**, Central / America/Chicago by default and set per session (fixes the 2026 evening bug).
 - **My entries** — the scorer's recent entries with Correct / Delete.
 
 ### Admin
@@ -132,6 +133,6 @@ result and its points in one step, so a half-saved entry can't happen.
 
 ## 8. Open questions
 
-1. Camp time zone for "today" defaults (assumed **America/New_York**).
-2. Is the camp logo OK to show on the public page?
-3. Should parents see the per-event W-L Team Analysis, or only standings and the event log?
+1. Is the camp logo OK to show on the public page?
+
+Decided: camp time zone is Central (America/Chicago). Parents see Team Analysis, with a per-session switch to hide it.
