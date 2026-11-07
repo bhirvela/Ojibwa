@@ -84,6 +84,7 @@ result and its points in one step, so a half-saved entry can't happen.
 ## 5. Screens
 
 ### Public (no sign-in) — mirrors the 2026 tabs
+- **Header** — Camp Ojibwa logo (`site/assets/camp-logo.png`), session name, and the scoring key.
 - **Standings** — ranked teams with plank-style name badges and sweep icons; ticker of recent results.
 - **Event Log** — rounds with matchup cards and placement tables; jump-to-round.
 - **Team Analysis** — W-L record by level; tap to see the events. Shown to parents by default;
@@ -133,6 +134,7 @@ result and its points in one step, so a half-saved entry can't happen.
 
 ## 8. Open questions
 
-1. Is the camp logo OK to show on the public page?
+None right now.
 
-Decided: camp time zone is Central (America/Chicago). Parents see Team Analysis, with a per-session switch to hide it.
+Decided: camp time zone is Central (America/Chicago). Parents see Team Analysis, with a per-session
+switch to hide it. The camp logo is shown in the public header.
