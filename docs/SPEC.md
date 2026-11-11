@@ -85,7 +85,8 @@ result and its points in one step, so a half-saved entry can't happen.
 
 ### Public (no sign-in) — mirrors the 2026 tabs
 - **Header** — Camp Ojibwa logo (`site/assets/camp-logo.png`), session name, and the scoring key.
-- **Standings** — ranked teams with plank-style name badges and sweep icons; ticker of recent results.
+- **Standings** — ranked teams with plank-style name badges and gold broom sweep icons
+  (`site/assets/sweep-icon.svg`, one per sweep); ticker of recent results.
 - **Event Log** — rounds with matchup cards and placement tables; jump-to-round.
 - **Team Analysis** — W-L record by level; tap to see the events. Shown to parents by default;
   admins can hide it per session (`show_team_analysis`).
